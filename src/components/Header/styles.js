@@ -1,4 +1,3 @@
-
 export const headerStyles = {
   title: {
     display: 'none',
@@ -12,9 +11,14 @@ export const headerStyles = {
     position: 'relative',
     borderRadius: '4px',
     backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    '&:hover': {backgroundColor: 'rgba(255, 255, 255, 0.15)'},
     marginRight: '0',
     marginLeft: '0',
     width: '100%',
+    '@media (min-width: 960px)': {
+      marginLeft: '24px',
+      width: 'auto',
+    },
   },
   searchHover: {
     backgroundColor: 'rgba(255, 255, 255, 0.25)',
@@ -33,15 +37,10 @@ export const headerStyles = {
   },
   inputInput: {
     padding: '8px 8px 8px 0',
-    paddingLeft: 'calc(1em + 32px)',
+    paddingLeft: 'calc(1em + 16px)',
+    transition: 'width 200ms',
     width: '100%',
-  },
-  '@media (min-width: 960px)': {
-    search: {
-      marginLeft: '24px',
-      width: 'auto',
-    },
-    inputInput: {
+    '@media (min-width: 960px)' : {
       width: '20ch',
     },
   },
