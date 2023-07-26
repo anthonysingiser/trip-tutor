@@ -1,11 +1,11 @@
 
 export const mapStyles = {
   paper: {
-    padding: '10px', 
+    padding: 10, 
     display: 'flex', 
     flexDirection: 'column', 
     justifyContent: 'center', 
-    width: '100px',
+    width: 100,
   },
   mapContainer: {
     height: '85vh', 
@@ -13,11 +13,8 @@ export const mapStyles = {
   },
   markerContainer: {
     position: 'absolute', 
-    transform: `translate(-50%, -50%)`, 
+    transform: 'translate(-50%, -50%)', 
     zIndex: 1, 
     '&:hover': { zIndex: 2 },
-  },
-  pointer: {
-    cursor: 'pointer',
   },
 };
