@@ -30,16 +30,6 @@ const App = () => {
             })
     }, [coordinates, bounds])
 
-    useEffect(() => {
-        getPlacesData(bounds.sw, bounds.ne)
-            .then((data) => {
-                
-                console.log(data)
-
-                setPlaces(data)
-            })
-    }, [coordinates, bounds]);
-
     return (
         <> 
             <CssBaseline />
@@ -51,9 +41,8 @@ const App = () => {
                         childClicked={childClicked}
                         isLoading={isLoading}
                     />
-
                 </Grid>
-                <Grid item xs={12} md={8}>
+                <Grid item xs={12} md={8} >
                     <Map 
                         setCoordinates={setCoordinates}
                         setBounds={setBounds}

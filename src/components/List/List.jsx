@@ -10,10 +10,11 @@ const List = ({ places, childClicked, isLoading }) => {
     const [elRefs, setElRefs] = useState([]);
 
     console.log({ childClicked });
+
     useEffect(() => {
-        const refs = Array(places?.length).fill().map((_, i) => elRefs[i] || createRef());
-        
-        setElRefs(refs);
+        const refs = Array(places?.length).fill().map((_, i) => elRefs[i] || createRef())
+        console.log('refs!', refs)
+        setElRefs(refs)
     }, [places])
 
     return (
@@ -42,9 +43,9 @@ const List = ({ places, childClicked, isLoading }) => {
                     <MenuItem value={4.5}>Above 4.5</MenuItem>
                 </Select>
             </FormControl>
-            <Grid container spacing={3} sx={listStyles.list}>
+            <Grid container spacing={3} style={{maxHeight: '75vh', overflow:'auto'}}>
                 {places?.map((place, i) => (
-                    <Grid item key={i} xs={12}>
+                    <Grid item ref={elRefs[i]} key={i} xs={12}>
                         <PlaceDetails 
                             place={place}
                             selected={Number(childClicked) === i}

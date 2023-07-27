@@ -13,6 +13,7 @@ export const getPlacesData = async (sw, ne) => {
             },
             headers: {
               
+              'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
             }
         });
         return data;

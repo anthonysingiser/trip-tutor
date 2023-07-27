@@ -8,15 +8,14 @@ import { placeStyles } from './styles';
 
 const PlaceDetails = ({ place, selected, refProp }) => {
 
-    console.log(place)
-
-    if(selected) refProp?.current?.scrollIntoView({behavior: 'smooth', block: 'start'})
+    console.log('refProp!', refProp)
+    if (selected) refProp?.current?.scrollIntoView({behavior: 'smooth', block: 'start'})
 
     return (
         <Card elevation={6}>
             <CardMedia
                 style={{ height: 350 }}
-                image={place.photo ? place.photo.images.large.url : 'https://t3.ftcdn.net/jpg/00/81/08/50/360_F_81085041_GIr7D2RwiPPiPQjDeyYd03zHrFulZpCf.jpg' }
+                image={place.photo ? place.photo.images.large.url : 'https://cdn-icons-png.flaticon.com/128/2688/2688884.png' }
                 title={place.name}
             />
             <CardContent>

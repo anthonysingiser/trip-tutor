@@ -20,7 +20,6 @@ const Map = ({ setCoordinates, setBounds, coordinates, places, setChildClicked }
                 margin = {[50, 50, 50, 50]}
                 options={''}
                 onChange={(e) => {
-                    console.log(e)
                     setCoordinates({ lat: e.center.lat, lng: e.center.lng })
                     setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw })
                 }}
@@ -42,7 +41,7 @@ const Map = ({ setCoordinates, setBounds, coordinates, places, setChildClicked }
                                         {place.name}
                                     </Typography>
                                     <img
-                                        className={{cursor: 'pointer'}}
+                                        style={{cursor: 'pointer'}}
                                         src={place.photo ? place.photo.images.small.url : 'https://cdn-icons-png.flaticon.com/128/2688/2688884.png'}
                                     />
                                     <Rating size='small' value={Number(place.rating)} readOnly />

@@ -1,7 +1,6 @@
 import { createTheme } from "@material-ui/core";
 
-
-const theme = createTheme
+const theme = createTheme()
 
 export const listStyles = {
   formControl: {
@@ -13,16 +12,15 @@ export const listStyles = {
     marginTop: theme.spacing(2),
   },
   loading: {
-    height: '600px', display: 'flex', justifyContent: 'center', alignItems: 'center',
+    height: '600px', 
+    display: 'flex', 
+    justifyContent: 'center', 
+    alignItems: 'center',
   },
   container: {
     padding: '25px',
   },
   marginBottom: {
     marginBottom: '30px',
-  },
-  list: {
-    height: '75vh', 
-    overflow: 'auto',
   },
 };
