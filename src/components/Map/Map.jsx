@@ -4,7 +4,7 @@ import { mapStyles } from './styles';
 import { Paper, Typography, useMediaQuery, Box } from '@material-ui/core';
 import { LocationOnOutlined } from '@material-ui/icons';
 import { Rating } from '@mui/material';
-
+import googleMapStyles from '../../googleMapStyles';
 
 const Map = ({ setCoordinates, setBounds, coordinates, places, setChildClicked }) => {
 
@@ -13,12 +13,12 @@ const Map = ({ setCoordinates, setBounds, coordinates, places, setChildClicked }
     return (
         <Box sx={mapStyles.mapContainer}>
             <GoogleMapReact
-                bootstrapURLKeys={{key: }}
+                bootstrapURLKeys={{key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY}}
                 defaultCenter={coordinates}
                 center={coordinates}
                 defaultZoom={14}
                 margin = {[50, 50, 50, 50]}
-                options={''}
+                options={{ disableDefaultUI: true, zoomControl: true, styles: googleMapStyles }}
                 onChange={(e) => {
                     setCoordinates({ lat: e.center.lat, lng: e.center.lng })
                     setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw })

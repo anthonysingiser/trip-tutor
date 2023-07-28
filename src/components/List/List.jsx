@@ -3,10 +3,8 @@ import { Box, CircularProgress, Grid, Typography, InputLabel, FormControl, Selec
 import { listStyles } from './styles';
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 
-const List = ({ places, childClicked, isLoading }) => {
+const List = ({ places, childClicked, isLoading, type, setType, rating, setRating }) => {
 
-    const [type, setType] = useState('restaurants');
-    const [rating, setRating] = useState('');
     const [elRefs, setElRefs] = useState([]);
 
     console.log({ childClicked });

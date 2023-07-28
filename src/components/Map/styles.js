@@ -5,7 +5,7 @@ export const mapStyles = {
     display: 'flex', 
     flexDirection: 'column', 
     justifyContent: 'center', 
-    width: 100,
+    width: 80,
   },
   mapContainer: {
     height: '85vh', 
