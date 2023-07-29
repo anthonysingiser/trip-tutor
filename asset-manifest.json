@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/trip-tutor/static/js/main.4ab18e4d.js",
+    "index.html": "/trip-tutor/index.html",
+    "main.4ab18e4d.js.map": "/trip-tutor/static/js/main.4ab18e4d.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.4ab18e4d.js"
+  ]
+}
