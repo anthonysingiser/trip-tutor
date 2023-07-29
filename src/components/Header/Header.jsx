@@ -20,11 +20,11 @@ const Header = ({ setCoordinates }) => {
 
     return (
         <AppBar position='static'>
-            <Toolbar sx={headerStyles.toolbar}>
+            <Toolbar style={{display: 'flex', justifyContent: 'space-between'}}>
                 <Typography variant='h5' sx={headerStyles.title}>
                     Trip Tutor
                 </Typography>
-                <Box display='flex'>
+                <Box style={{display:'flex', justifyContent:'space-between'}}>
                     <Typography variant='h6' sx={headerStyles.title}>
                         Find new places
                     </Typography>
@@ -35,7 +35,13 @@ const Header = ({ setCoordinates }) => {
                             </Box>
                             <InputBase 
                                 placeholder='Search...' 
-                                sx={[headerStyles.inputInput, headerStyles.inputRoot]}
+                                sx={{color: 'inherit'}}
+                                style={{
+                                    padding: '8px 8px 8px 0',
+                                    paddingLeft: 'calc(2em + 16px)',
+                                    transition: 'width 200ms',
+                                    width: '100%',
+                                }}
                             />
                         </Box>
                     </Autocomplete>
